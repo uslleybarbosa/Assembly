@@ -1,5 +1,4 @@
-
-##section .text
+## section .text
 
 ```
 
@@ -8,8 +7,8 @@ global _start
 
 ```
 
-*     Define a seção de código executável.
-*    global _start informa ao linker que o ponto de entrada do programa é o rótulo _start.
+*  Define a seção de código executável.
+*  Global _start informa ao linker que o ponto de entrada do programa é o rótulo _start.
 
 # _start
 
@@ -86,5 +85,8 @@ xor ebx, ebx
 int 0x80
 
 ```
+ * mov eax, 1 → define a syscall exit. No Linux 32‑bit, cada syscall tem um número; 1 corresponde a exit.
 
+* xor ebx, ebx → zera o registrador ebx, que é usado para passar o código de saída (nesse caso, 0).
 
+* int 0x80 → instrução que chama o kernel no modo 32‑bit para executar a syscall.
