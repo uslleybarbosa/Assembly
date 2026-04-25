@@ -25,7 +25,7 @@ global _start
 
 ### _start
 
-```
+```asm
 
 mov edx, len
 mov ecx, msg
@@ -42,7 +42,7 @@ mov eax, 4
 
 * mov eax, 4 → define a syscall write (escrever dados).
 
-```
+```asm
 
 int 0x80
 
@@ -54,7 +54,7 @@ int 0x80
 
 ### Encerramento do programa
 
-```
+```asm
 
 ;exit(0)
 mov eax, 1
