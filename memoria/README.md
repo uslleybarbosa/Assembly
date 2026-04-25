@@ -1,26 +1,22 @@
-## section .text
+## Vamos explicar cada etapa desse código em ASSEMBLY 32 BIT
 
-```
+<details>
+  
+  <summary>🔎 Seção .text</summary>
 
-section .text
-global _start 
+* Define a seção de código executável.  
+* O rótulo global `_start` informa o ponto de entrada do programa é o símbolo `_start`.
 
-```
+</details>
 
-*  Define a seção de código executável.
-*  Global _start informa ao linker que o ponto de entrada do programa é o rótulo _start.
-
-# _start
-
-```
-
-_start:
-
-```
+<details>
+  <summary>🚀 # _start</summary>
 
 * Marca o início da execução do programa.
 
-# Operações matemáticas
+</details>
+
+### Operações matemáticas
 
 ```
 
@@ -49,7 +45,7 @@ IMUL edx, 9
 * Multiplica o valor em EDX por 9.
 * Exemplo: se edx = 3, depois dessa instrução edx = 27
 
-# Movimentação e comparação
+### Movimentação e comparação
 
 ```
 
@@ -71,10 +67,10 @@ JE fim
 
 ```
 
-* JE (Jump if Equal) → se ecx == eax, salta para o rótulo fim.
+* JE  → se ecx == eax, salta para o rótulo fim.
 * Caso contrário, continua a execução normalmente.
 
-# Fim do programa
+### Fim do programa
 
 ```
 
@@ -85,7 +81,7 @@ xor ebx, ebx
 int 0x80
 
 ```
- * mov eax, 1 → define a syscall exit. No Linux 32‑bit, cada syscall tem um número; 1 corresponde a exit.
+* mov eax, 1 → define a syscall exit. No Linux 32‑bit, cada syscall tem um número; 1 corresponde a exit.
 
 * xor ebx, ebx → zera o registrador ebx, que é usado para passar o código de saída (nesse caso, 0).
 
