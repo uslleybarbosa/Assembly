@@ -18,7 +18,7 @@
 
 ### Operações matemáticas
 
-```
+```asm
 
 ADD eax, 9
 
@@ -27,7 +27,7 @@ ADD eax, 9
 * Soma 9 ao valor contido em EAX.
 * Exemplo: se eax = 0, depois dessa instrução eax = 9
 
-``` 
+```asm
 
 SUB ebx, 2 
 
@@ -36,7 +36,7 @@ SUB ebx, 2
 * Subtrai 2 do valor em EBX.
 * Exemplo: se ebx = 0, depois dessa instrução ebx = -2.
 
-```
+```asm
 
 IMUL edx, 9
 
@@ -47,7 +47,7 @@ IMUL edx, 9
 
 ### Movimentação e comparação
 
-```
+```asm
 
 MOV ecx, edx 
 
@@ -55,13 +55,13 @@ MOV ecx, edx
 
 * Copia o valor de EDX para ECX.
 
-```
+```asm
 CMP ecx, eax 
 ```
 
 * Compara os valores de ECX e EAX.
 
-```
+```asm
 
 JE fim
 
@@ -72,7 +72,7 @@ JE fim
 
 ### Fim do programa
 
-```
+```asm
 
 fim:
 
