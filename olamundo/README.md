@@ -1,26 +1,29 @@
+## Explicando cada etapa desse código em Assembly 32 bit
 
-## section .data
+<details>
+  <summary>📦 section .data</summary>
 
-```
-
-msg  db "Olá mundo",  0xA
+``` asm
+msg  db "Olá mundo", 0xA
 len  equ $ - msg
 
-```
-* msg → variável que guarda a string "Olá mundo" seguida de 0xA (quebra de linha).
-* len → constante que calcula o tamanho da string. O $ representa a posição atual do assembler, então $ - msg dá o número de bytes ocupados pela string.
+``` 
 
-# section .text
+msg → variável que guarda a string "Olá mundo" seguida de 0xA (quebra de linha).
 
-```
+len → Vai calcula o tamanho da string. O $ representa a posição atual do assembler, então $ - msg dá o número de bytes ocupados pela string.
 
+</details>
+
+<details>
+  <summary>📝 global _start</summary>
+
+```asm
 global _start
-
-```
-
+``` 
 * Define o ponto de entrada do programa (_start).
 
-# _start
+### _start
 
 ```
 
@@ -49,7 +52,7 @@ int 0x80
 
 * Resultado: imprime "Olá mundo" no terminal.
 
-# Encerramento do programa
+### Encerramento do programa
 
 ```
 
